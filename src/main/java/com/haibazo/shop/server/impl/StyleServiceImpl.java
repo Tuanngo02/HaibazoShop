@@ -2,7 +2,6 @@ package com.haibazo.shop.server.impl;
 
 import com.haibazo.shop.dto.request.StyleRequest;
 import com.haibazo.shop.dto.response.StyleResponse;
-import com.haibazo.shop.entity.Color;
 import com.haibazo.shop.entity.Style;
 import com.haibazo.shop.mapper.StyleMapper;
 import com.haibazo.shop.repository.StyleRepository;

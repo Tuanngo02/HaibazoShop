@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "1ec108f8-b1ec-400f-82e7-6ecef6dcbb7f",
+		"name": "haibazoShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29485092"
+	},
+	"item": [
+		{
+			"name": "Get All product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1ef7db65-e88f-4ad0-b89e-43b1a075bc06"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/shop/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shop",
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "postman-cloud:///1ef7e790-d9cd-47e0-8946-b7cd1f6892ff"
+						},
+						{
+							"key": "name",
+							"value": "Product 3",
+							"type": "text"
+						},
+						{
+							"key": "original_price",
+							"value": "1000.0",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1000.0",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "4 sao",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "style",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/shop/products/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shop",
+						"products",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/shop/products/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shop",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "Product 1",
+							"disabled": true
+						},
+						{
+							"key": "categoryName",
+							"value": "Outdoor",
+							"disabled": true
+						},
+						{
+							"key": "colorName",
+							"value": "Green",
+							"disabled": true
+						},
+						{
+							"key": "sizeLabel",
+							"value": "L",
+							"disabled": true
+						},
+						{
+							"key": "styleName",
+							"value": "Modern",
+							"disabled": true
+						},
+						{
+							"key": "priceFrom",
+							"value": "0.0",
+							"disabled": true
+						},
+						{
+							"key": "priceTo",
+							"value": "5000.0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Category",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"House_Category\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shop/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shop",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"House\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shop/category/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shop",
+						"category",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shop/category/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shop",
+						"category",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Product 1",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "style\n",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1ef7e76c-3904-4f30-adad-760d9c9cfe33"
+						},
+						{
+							"key": "price",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "original_price",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/shop/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shop",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Style",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shop/style",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shop",
+						"style"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Color",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shop/color",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shop",
+						"color"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

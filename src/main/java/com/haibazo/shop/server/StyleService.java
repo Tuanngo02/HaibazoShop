@@ -1,8 +1,6 @@
 package com.haibazo.shop.server;
 
-import com.haibazo.shop.dto.request.ColorRequest;
 import com.haibazo.shop.dto.request.StyleRequest;
-import com.haibazo.shop.dto.response.ColorResponse;
 import com.haibazo.shop.dto.response.StyleResponse;
 
 import java.util.List;

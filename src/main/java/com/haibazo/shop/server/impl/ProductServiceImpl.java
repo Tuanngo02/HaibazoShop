@@ -54,13 +54,6 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<ProductResponse> searchProduct(String keyword, String categoryName, String colorName, String sizeLabel, String styleName, float priceFrom, float priceTo) {
         List<Product> product = productRepository.findByKeyword(keyword, categoryName, colorName, sizeLabel,styleName, priceFrom, priceTo);
-//        System.out.println(product);
-//        List<ProductResponse> d = new ArrayList<>();
-//        System.out.println(product.getFirst().getName());
-//        for (Product product1 : product){
-//            System.out.println(product1.getCategory().getName());
-//        }
-//        System.out.println(d);
         return product.stream().map(productMapper::toProductResponse).toList();
     }
 

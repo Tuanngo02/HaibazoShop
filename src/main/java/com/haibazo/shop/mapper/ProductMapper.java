@@ -5,9 +5,6 @@ import com.haibazo.shop.dto.response.ProductResponse;
 import com.haibazo.shop.entity.*;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
-import java.util.Map;
-
 @Component
 public class ProductMapper {
     public Product toProduct (ProductRequest productRequest, Category category, Color color, Size size, Style style, String image_url) {
